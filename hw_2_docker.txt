@@ -1,0 +1,498 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)
+
+PS C:\Users\willy> git commit -am "Выполнено 1 дз контейнеризация"
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\willy> ssh -p 8022 gb@localhost
+gb@localhost's password:
+Permission denied, please try again.
+gb@localhost's password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Expanded Security Maintenance for Applications is not enabled.
+
+4 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+2 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Sun Jul 16 23:06:12 2023 from 10.0.2.2
+gb@mygb:~$ sudo apt update
+[sudo] password for gb:
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [443 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [792 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [200 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [99,5 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main DEP-11 48x48 Icons [33,0 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main DEP-11 64x64 Icons [51,3 kB]
+Get:11 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [15,4 kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted i386 Packages [30,0 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [567 kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [88,2 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [528 B]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [266 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [943 kB]
+Get:18 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [632 kB]
+Get:19 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [202 kB]
+Get:20 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [275 kB]
+Get:21 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe DEP-11 48x48 Icons [185 kB]
+Get:22 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe DEP-11 64x64 Icons [284 kB]
+Get:23 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [20,7 kB]
+Get:24 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [41,6 kB]
+Get:25 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse i386 Packages [3 888 B]
+Get:26 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [9 764 B]
+Get:27 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:28 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [476 B]
+Get:29 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main i386 Packages [33,7 kB]
+Get:30 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [572 kB]
+Get:31 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [40,9 kB]
+Get:32 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [8 000 B]
+Get:33 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:34 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [22,2 kB]
+Get:35 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [140 kB]
+Get:36 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [12,8 kB]
+Get:37 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [41,4 kB]
+Get:38 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [15,4 kB]
+Get:39 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [15,4 kB]
+Get:40 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe DEP-11 64x64 Icons [22,2 kB]
+Get:41 http://security.ubuntu.com/ubuntu jammy-security/main DEP-11 48x48 Icons [13,8 kB]
+Get:42 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [580 B]
+Get:43 http://security.ubuntu.com/ubuntu jammy-security/main DEP-11 64x64 Icons [22,7 kB]
+Get:44 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [11,0 kB]
+Get:45 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [558 kB]
+Get:46 http://security.ubuntu.com/ubuntu jammy-security/restricted i386 Packages [29,7 kB]
+Get:47 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [87,2 kB]
+Get:48 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [532 B]
+Get:49 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [539 kB]
+Get:50 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [748 kB]
+Get:51 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [133 kB]
+Get:52 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [22,0 kB]
+Get:53 http://security.ubuntu.com/ubuntu jammy-security/universe DEP-11 48x48 Icons [19,7 kB]
+Get:54 http://security.ubuntu.com/ubuntu jammy-security/universe DEP-11 64x64 Icons [31,7 kB]
+Get:55 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [15,7 kB]
+Get:56 http://security.ubuntu.com/ubuntu jammy-security/multiverse i386 Packages [1 032 B]
+Get:57 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [36,5 kB]
+Get:58 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7 060 B]
+Get:59 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+Fetched 8 720 kB in 7s (1 316 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+245 packages can be upgraded. Run 'apt list --upgradable' to see them.
+gb@mygb:~$ sudo apt install lxc-utils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libfuse2 liblxc-common liblxc1 libpam-cgfs lxcfs uidmap
+Suggested packages:
+  btrfs-tools lvm2 lxc-templates lxctl
+The following NEW packages will be installed:
+  libfuse2 liblxc-common liblxc1 libpam-cgfs lxc-utils lxcfs uidmap
+0 upgraded, 7 newly installed, 0 to remove and 245 not upgraded.
+Need to get 1 420 kB of archives.
+After this operation, 4 984 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 libfuse2 amd64 2.9.9-5ubuntu3 [90,3 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 liblxc1 amd64 1:5.0.0~git2209-g5a7b9ce67-0ubuntu1 [356 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 liblxc-common amd64 1:5.0.0~git2209-g5a7b9ce67-0ubuntu1 [460 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 libpam-cgfs amd64 1:5.0.0~git2209-g5a7b9ce67-0ubuntu1 [25,5 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 lxc-utils amd64 1:5.0.0~git2209-g5a7b9ce67-0ubuntu1 [385 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 lxcfs amd64 5.0.0-0ubuntu2 [81,1 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 uidmap amd64 1:4.8.1-2ubuntu2.1 [22,4 kB]
+Fetched 1 420 kB in 1s (1 725 kB/s)
+Selecting previously unselected package libfuse2:amd64.
+(Reading database ... 246318 files and directories currently installed.)
+Preparing to unpack .../0-libfuse2_2.9.9-5ubuntu3_amd64.deb ...
+Unpacking libfuse2:amd64 (2.9.9-5ubuntu3) ...
+Selecting previously unselected package liblxc1.
+Preparing to unpack .../1-liblxc1_1%3a5.0.0~git2209-g5a7b9ce67-0ubuntu1_amd64.deb ...
+Unpacking liblxc1 (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Selecting previously unselected package liblxc-common.
+Preparing to unpack .../2-liblxc-common_1%3a5.0.0~git2209-g5a7b9ce67-0ubuntu1_amd64.deb ...
+Unpacking liblxc-common (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Selecting previously unselected package libpam-cgfs.
+Preparing to unpack .../3-libpam-cgfs_1%3a5.0.0~git2209-g5a7b9ce67-0ubuntu1_amd64.deb ...
+Unpacking libpam-cgfs (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Selecting previously unselected package lxc-utils.
+Preparing to unpack .../4-lxc-utils_1%3a5.0.0~git2209-g5a7b9ce67-0ubuntu1_amd64.deb ...
+Unpacking lxc-utils (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Selecting previously unselected package lxcfs.
+Preparing to unpack .../5-lxcfs_5.0.0-0ubuntu2_amd64.deb ...
+Unpacking lxcfs (5.0.0-0ubuntu2) ...
+Selecting previously unselected package uidmap.
+Preparing to unpack .../6-uidmap_1%3a4.8.1-2ubuntu2.1_amd64.deb ...
+Unpacking uidmap (1:4.8.1-2ubuntu2.1) ...
+Setting up libpam-cgfs (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Setting up uidmap (1:4.8.1-2ubuntu2.1) ...
+Setting up libfuse2:amd64 (2.9.9-5ubuntu3) ...
+Setting up lxcfs (5.0.0-0ubuntu2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/lxcfs.service → /lib/systemd/system/lxcfs.service.
+Setting up liblxc1 (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Setting up lxc-utils (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/lxc-monitord.service → /lib/systemd/system/lxc-monitord.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/lxc-net.service → /lib/systemd/system/lxc-net.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/lxc.service → /lib/systemd/system/lxc.service.
+Setting up lxc dnsmasq configuration.
+Setting up liblxc-common (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+gb@mygb:~$ lxc network list
+Command 'lxc' not found, but can be installed with:
+sudo snap install lxd            # version 5.15-002fa0f, or
+sudo apt  install lxd-installer  # version 1
+See 'snap info lxd' for additional versions.
+gb@mygb:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:30:44:3f brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86123sec preferred_lft 86123sec
+    inet6 fe80::b520:f147:5653:364c/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:b7:1e:1a:fa brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+4: lxcbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 00:16:3e:00:00:00 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+
+gb@mygb:~$ sudo su
+root@mygb:/home/gb# lxc-create -n ubuntu_2_hw -t ubuntu -o MyLogFile.txt  --logpriority=TRACE
+Checking cache download in /var/cache/lxc/jammy/rootfs-amd64 ...
+Copy /var/cache/lxc/jammy/rootfs-amd64 to /var/lib/lxc/ubuntu_2_hw/rootfs ...
+Copying rootfs to /var/lib/lxc/ubuntu_2_hw/rootfs ...
+Generating locales (this might take a while)...
+  en_US.UTF-8... done
+Generation complete.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_TIME = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+locale: Cannot set LC_ALL to default locale: No such file or directory
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:3HM9w29Lor7uZwWgFixSNlSDP3Ew5+J3cqXbuasAzNI root@mygb (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:rNkx/7XIZeXFU3YxgG1LRubE+hO3dqdqEBeGmrVYfyY root@mygb (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:HOzYwofkRw3edMUeyO9p/gCq6Dkw0GjYo19psDfLk+0 root@mygb (ED25519)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_TIME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+        LANGUAGE = "en_US:",
+        LC_ALL = (unset),
+        LC_ADDRESS = "ru_RU.UTF-8",
+        LC_NAME = "ru_RU.UTF-8",
+        LC_MONETARY = "ru_RU.UTF-8",
+        LC_PAPER = "ru_RU.UTF-8",
+        LC_IDENTIFICATION = "ru_RU.UTF-8",
+        LC_TELEPHONE = "ru_RU.UTF-8",
+        LC_MEASUREMENT = "ru_RU.UTF-8",
+        LC_TIME = "ru_RU.UTF-8",
+        LC_NUMERIC = "ru_RU.UTF-8",
+        LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Sun Jul 16 23:10:03 UTC 2023.
+Universal Time is now:  Sun Jul 16 23:10:03 UTC 2023.
+
+
+##
+# The default user is 'ubuntu' with password 'ubuntu'!
+# Use the 'sudo' command to run tasks as root in the container.
+##
+
+root@mygb:/home/gb# nano /var/lib/lxc/ubuntu_2_hw/config
+root@mygb:/home/gb# ll
+total 152
+drwxr-x--- 18 gb   gb    4096 июл 17 02:10  ./
+drwxr-xr-x  3 root root  4096 апр 14 23:27  ../
+-rw-------  1 gb   gb   16212 июл 17 01:42  .bash_history
+-rw-r--r--  1 gb   gb     220 апр 14 23:27  .bash_logout
+-rw-r--r--  1 gb   gb    3771 апр 14 23:27  .bashrc
+drwx------ 12 gb   gb    4096 мая  1 18:27  .cache/
+drwx------ 12 gb   gb    4096 мая  2 21:08  .config/
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Desktop/
+-rw-rw-r--  1 gb   gb     209 мая  8 16:17  Dockerfile
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Documents/
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Downloads/
+drwx------  2 gb   gb    4096 апр 14 23:40  .gnupg/
+drwxrwxr-x  5 gb   gb    4096 июл 16 22:10  isol_folder/
+-rw-------  1 gb   gb      20 мая  4 19:17  .lesshst
+drwx------  3 gb   gb    4096 апр 14 23:38  .local/
+-rw-r-----  1 root root     0 июл 17 01:50 '--logfile=MyLogFile.txt'
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Music/
+-rw-r-----  1 root root   705 июл 17 02:09  MyLogFile.txt
+-rwxrwxr-x  1 gb   gb     131 мая 11 20:26  myscript.sh*
+-rw-rw-r--  1 gb   gb    1024 мая 11 20:27  .myscript.sh.swp
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Pictures/
+-rw-rw-r--  1 gb   gb       0 мая 11 19:27  print100
+-rwxrwxr-x  1 gb   gb      73 мая 11 19:37  printeven*
+-rw-rw-r--  1 gb   gb       0 мая 11 19:40  printeven.bs
+-rw-r--r--  1 gb   gb     807 апр 14 23:27  .profile
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Public/
+-rw-rw-r--  1 gb   gb     167 мая 11 19:29  scriptEven.sh
+-rw-rw-r--  1 gb   gb      66 апр 27 19:19  .selected_editor
+drwx------  6 gb   gb    4096 июл 17 00:00  snap/
+drwx------  2 gb   gb    4096 апр 14 23:40  .ssh/
+-rw-rw-r--  1 gb   gb       0 мая  8 16:05  ssh
+-rw-r--r--  1 gb   gb       0 апр 15 00:34  .sudo_as_admin_successful
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Templates/
+drwxrwxr-x  2 gb   gb    4096 мая 11 19:55  testdirectory/
+-rw-rw-r--  1 gb   gb      12 апр 27 19:17  test.txt
+-rw-rw-r--  1 gb   gb      12 июл 17 02:10  test.txt.bak
+-rw-rw-r--  1 gb   gb      12 июл 17 02:00  test.txt.bak~
+drwxr-xr-x  2 gb   gb    4096 апр 14 23:38  Videos/
+-rw-------  1 gb   gb    6835 апр 17 19:37  .viminfo
+root@mygb:/home/gb# reboot
+Connection to localhost closed by remote host.
+Connection to localhost closed.
+PS C:\Users\willy> ssh -p 8022 gb@localhost
+kex_exchange_identification: read: Connection aborted
+PS C:\Users\willy> ssh -p 8022 gb@localhost
+gb@localhost's password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Expanded Security Maintenance for Applications is not enabled.
+
+249 updates can be applied immediately.
+156 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+2 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Mon Jul 17 02:02:55 2023 from 10.0.2.2
+gb@mygb:~$ lxc-ls -f
+gb@mygb:~$ sudo su
+[sudo] password for gb:
+root@mygb:/home/gb# lxc-ls -f
+NAME        STATE   AUTOSTART GROUPS IPV4       IPV6 UNPRIVILEGED
+ubuntu_2_hw RUNNING 1         -      10.0.3.177 -    false
+root@mygb:/home/gb# lxc-attach -n ubuntu_2_hw
+root@ubuntu2hw:/# free -m
+               total        used        free      shared  buff/cache   available
+Mem:             256          28         225           0           2         227
+Swap:              0           0           0
+root@mygb:/home/gb# lxc-stop -n ubuntu_2_hw
+root@mygb:/home/gb# nano MyLogFile.txt
+root@mygb:/home/gb# root@mygb:/home/gb# exit
+exit
+gb@mygb:~$ exit
+logout
+Connection to localhost closed.
+PS C:\Users\willy>
